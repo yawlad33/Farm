@@ -3,7 +3,7 @@
 
 class Farm{
     
-	private $chikens = [];//курицы
+    private $chikens = [];//курицы
     private $cows = []; //коровы
     private $chik_profit = 0;//собранные яйца куриц
     private $cow_profit = 0;//собранные литры молока
@@ -18,15 +18,14 @@ class Farm{
          }
     }
     
- 	public function addCow(){//добавление коровы
+    public function addCow(){//добавление коровы
       $this->cows[] = rand(10,1000);
       echo "Корова добавлена \n";
     }
     
     public function addChiken(){//добавление курицы
         $this->chikens[] = rand(10,1000);
-        echo "Курица добавлена \n";
-          
+        echo "Курица добавлена \n";    
     }
 
     public function getProfit(){
@@ -44,10 +43,7 @@ class Farm{
         echo "Количество коров: " . count($this->cows) . "\n";
     	echo "Количество собранных яиц: " . $this->chik_profit . "\n";
         echo "Количество собранного молока(л): " . $this->cow_profit . "\n";
-    }
-    
-    
-    
+    }  
 }
 
 
