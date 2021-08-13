@@ -1,31 +1,48 @@
 
 <?php
 
+class chiken{
+    private $number;
+    
+    public function __construct($numb){
+        $this->number = $numb; 
+    }
+}
+
+class cow{
+    private $number;
+    
+    public function __construct($numb){
+        $this->number = $numb; 
+    }
+}
+
 class Farm{
     
-    private $chikens = [];//курицы
+	private $chikens = [];//курицы
     private $cows = []; //коровы
     private $chik_profit = 0;//собранные яйца куриц
     private $cow_profit = 0;//собранные литры молока
     
     public function __construct(){
          for($i=0;$i<15;$i++){//базовое заполнение массивов
-             $this->chikens[] = rand(10,1000);
+             $this->chikens[] = new chiken(rand(10,1000));
          }
          
          for($i=0;$i<7;$i++){
-             $this->cows[] = rand(10,1000);
+             $this->cows[] = new cow(rand(10,1000));
          }
     }
     
-    public function addCow(){//добавление коровы
-      $this->cows[] = rand(10,1000);
+ 	public function addCow(){//добавление коровы
+      $this->cows[] = new cow(rand(10,1000));
       echo "Корова добавлена \n";
     }
     
     public function addChiken(){//добавление курицы
-        $this->chikens[] = rand(10,1000);
-        echo "Курица добавлена \n";    
+        $this->chikens[] = new chiken(rand(10,1000));
+        echo "Курица добавлена \n";
+          
     }
 
     public function getProfit(){
@@ -43,7 +60,10 @@ class Farm{
         echo "Количество коров: " . count($this->cows) . "\n";
     	echo "Количество собранных яиц: " . $this->chik_profit . "\n";
         echo "Количество собранного молока(л): " . $this->cow_profit . "\n";
-    }  
+    }
+    
+    
+    
 }
 
 
@@ -60,4 +80,5 @@ $obj->getProfit();
 $obj->print_info();
 
 ?>
+
 
