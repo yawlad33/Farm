@@ -75,6 +75,7 @@ $obj->print_info();
 
 $obj->addCow();
 $obj->addChiken();
+$obj->getProfit(); //сбор урожая
 $obj->print_info();
 
 //сбор урожая и вывод
