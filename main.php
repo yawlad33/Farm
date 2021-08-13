@@ -71,6 +71,8 @@ $obj = new Farm(); //создание объекта класса
 $obj->print_info();//базовая информация
 
 $obj->getProfit(); //сбор урожая/добавление по одному животному
+$obj->print_info();
+
 $obj->addCow();
 $obj->addChiken();
 $obj->print_info();
